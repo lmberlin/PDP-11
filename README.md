@@ -7,14 +7,8 @@ typedef word adr;
 
 word mem[64*1024];
 
-
-
-
 #define LO(x) ((x) & 0xFF)
 #define HI(x) (((x) >> 8) & 0xFF)
-
-
-
 word w_read (adr a) {
     return mem[a];
 }
@@ -47,20 +41,6 @@ void b_write(adr a, byte val)
 }
 
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
 void test_mem() {
     byte b1;
     word w;
@@ -71,20 +51,6 @@ void test_mem() {
     printf("%04x = %02x" , w, b1);
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 int main() {
     test_mem();
