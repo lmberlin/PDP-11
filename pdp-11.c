@@ -35,6 +35,7 @@ byte b_read (adr a) {
     return res;
 }
 
+
 void b_write(adr a, byte val)
 {
 	if(a%2 == 0) {
