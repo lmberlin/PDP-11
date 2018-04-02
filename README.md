@@ -71,7 +71,40 @@ void test_mem() {
     printf("%04x = %02x" , w, b1);
 
 }
+void load_file( )
+{
 
+unsigned int w,v,start, y,i;
+
+
+    while(scanf("%x%x", &start, &y) == 2)
+    {
+        //printf("%x = %x" , start, y);
+
+        for(i=0; i<y; i=i+1)
+        {
+            scanf("%x", &w);
+            b_write(start,w);
+
+            //v=b_read(start);
+            //printf("%02x  %02x" , w, v);
+            start=start+1;
+
+
+        }
+
+    }
+}
+
+void mem_dump(adr start, word n)
+{
+word i;
+    for(i = 0; i < n; i = i + 2)
+    {
+        printf("%06o : %06o\n", (start+i), w_read(start+i));
+    }
+
+}
 
 
 
